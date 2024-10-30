@@ -89,7 +89,7 @@ def get_text_from_image(image: Image.Image) -> str:
     return get_highest_confidence_text(ocr_result)
 
 
-@app.route('/ocr', methods=['POST'])
+@app.route('/v1/image/ocr', methods=['POST'])
 def get_text():
     start_time = time.time()
     # Step 1: 读取 URL 或 Base64
@@ -127,7 +127,7 @@ def get_text():
     return text
 
 
-@app.route('/combined_gif', methods=['POST'])
+@app.route('/v1/image/combined_gif', methods=['POST'])
 def get_combined_image():
     url = request.form.get('url')
     image_base64 = request.form.get('image_base64')

@@ -35,7 +35,7 @@ python main.py
 
 ## API 文档
 
-### 接口：`/ocr`
+### 接口：`/v1/image//ocr`
 
 * **方法**：`POST`
 * **Content-Type**：`application/x-www-form-urlencoded`
@@ -50,12 +50,12 @@ python main.py
 示例 cURL 请求：
 
 ```bash
-curl -X POST 'http://127.0.0.1:5000/ocr' \
+curl -X POST 'http://127.0.0.1:5000/v1/image/ocr' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'image_base64=R0lGODlhWgA6APcAAAAAAAEBAQICAg...'
 ```
 
-`/combined_gif`
+`/v1/image/combined_gif`
 
 * **方法**：`POST`
 * **Content-Type**：`application/x-www-form-urlencoded`
