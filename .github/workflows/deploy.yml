@@ -1,7 +1,6 @@
-name: Docker Build and Push
-
+name: Docker Build and Push‘’
 on:
-  push:
+#  push:
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
@@ -26,3 +25,4 @@ jobs:
         run: |
           docker build -f deploy/Dockerfile -t docker.kexie.space/wilinz/image-captcha-ocr-service:latest --push . &
           docker build -f deploy/Dockerfile_cuda -t docker.kexie.space/wilinz/image-captcha-ocr-gpu-service:latest --push . &
+          wait
