@@ -3,7 +3,7 @@
 本项目提供一个基于 PaddleOCR 的验证码识别 API，支持静态图像和 GIF 动态图片。API 能识别验证码图像中的文本并返回识别结果。
 
 ## 示例图片
-![code.gif](test%2Fcode.gif)
+![code.gif](test/code.gif)
 
 来源：https://pass.hust.edu.cn/cas/code
 
@@ -66,7 +66,7 @@ curl -X POST 'http://127.0.0.1:5000/ocr' \
 * **响应**：
     * **成功** (200)：返回合并GIF后的静态图像内容。
     * **错误** (400)：当 `url` 和 `image_base64` 均缺失时返回错误信息。
-  
+
 ## 基准测试
 
 使用 Apache Benchmark (AB) 进行测试：
@@ -167,5 +167,4 @@ Percentage of the requests served within a certain time (ms)
   99%    645
  100%   1469 (longest request)
 ```
-
 
