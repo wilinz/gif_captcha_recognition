@@ -4,10 +4,10 @@ FROM python:3.10.15-slim
 WORKDIR /app
 
 # 复制当前目录的内容到容器的 /app 目录中
-COPY . /app
+COPY .. /app
 
 RUN apt update && apt-get install libgl1 libglib2.0-0 libgomp1 -y
-# 安装 Python 依赖
+RUN python -m pip install paddlepaddle==2.5.2 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 暴露 Flask 应用的端口
