@@ -35,7 +35,7 @@ python main.py
 
 ## API 文档
 
-### 接口：`/v1/image//ocr`
+### 接口：`/v1/image/ocr`
 
 * **方法**：`POST`
 * **Content-Type**：`application/x-www-form-urlencoded`
